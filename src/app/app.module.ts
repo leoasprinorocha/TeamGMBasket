@@ -1,6 +1,8 @@
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    HomeModule
+    HomeModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
