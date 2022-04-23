@@ -1,43 +1,38 @@
-import { Component, Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { AutenticacaoService } from './../autenticacao/autenticacao.service';
+import { Component, Injectable, NgModule, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: [
-    './CSS/home.component.css'
-  ],
+  styleUrls: ['./CSS/home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   invalidLogin: boolean;
-  constructor(private http: HttpClient) {
+  email = '';
+  password = '';
+  UserData: any;
+
+  constructor(private authService: AutenticacaoService) {
     this.invalidLogin = true;
   }
 
-  login(form: NgForm){
-    const credentials = {
-      'Email': form.value.Email,
-      'Password': form.value.Password
-    }
+  async login(form: NgForm) {
+    this.UserData = await this.authService.autenticar(this.email, this.password);
 
-    this.http.post("http://localhost:31964/api/authentication/login", credentials)
-    .subscribe(response => {
-
-      const token = (<any>response).token;
-      localStorage.setItem("jwt", token);
-      this.invalidLogin = false;
+        const token = this.UserData.token.AccessToken;
+        localStorage.setItem("jwt", token);
+        this.invalidLogin = false;
 
 
-    },
-    err => {
-      this.invalidLogin = true
-    }
 
-    );
   }
 
-  logOut(){
-    localStorage.removeItem("jwt");
+  ngOnInit(): void {}
+
+  logOut() {
+    localStorage.removeItem('jwt');
   }
 }

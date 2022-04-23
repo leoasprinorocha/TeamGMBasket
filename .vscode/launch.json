@@ -2,6 +2,7 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
     {
       "type": "firefox",
       "request": "launch",
@@ -16,6 +17,13 @@
       "request": "launch",
       "preLaunchTask": "npm: start",
       "url": "http://192.168.137.1:45000/"
+    },
+    {
+      "name": "mobile",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: start",
+      "url": "http://192.168.100.19:45000/"
     },
     {
       "name": "ng test",

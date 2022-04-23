@@ -5,19 +5,18 @@
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
 
-            <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-
+            <form class="form" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
 
               <img class="logo_formatacao"src="assets/images/logoNova.png"/>
 
 
               <div class="form-outline form-white mb-4">
-                <input type="email" id="Email" name="Email" ngModel class="form-control" [ngModelOptions]="{standalone: true}"/>
+                <input type="email" id="Email"  [(ngModel)]="email" name="email" class="form-control" />
                 <label class="form-label" for="Email">Email</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password" id="Password" name="Password" ngModel class="form-control" [ngModelOptions]="{standalone: true}" required autofocus/>
+                <input type="password" id="Password" [(ngModel)]="password" name="password" class="form-control" required autofocus/>
                 <label class="form-label" for="Password">Senha</label>
               </div>
 
