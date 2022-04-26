@@ -1,3 +1,4 @@
+import { ClienteRoutingModule } from './cliente/cliente-routing.module';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeModule,
     HttpClientModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClienteRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

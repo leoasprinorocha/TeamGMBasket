@@ -1,8 +1,7 @@
 import { AutenticacaoService } from './../autenticacao/autenticacao.service';
 import { Component, Injectable, NgModule, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import { lastValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,19 +14,26 @@ export class HomeComponent implements OnInit {
   password = '';
   UserData: any;
 
-  constructor(private authService: AutenticacaoService) {
+  constructor(
+    private authService: AutenticacaoService,
+    private router: Router
+  ) {
     this.invalidLogin = true;
   }
 
-  async login(form: NgForm) {
-    this.UserData = await this.authService.autenticar(this.email, this.password);
+  login(form: NgForm) {
+    this.UserData = this.authService
+      .autenticar(this.email, this.password)
+      .subscribe(
+        () => {
 
-        const token = this.UserData.token.AccessToken;
-        localStorage.setItem("jwt", token);
-        this.invalidLogin = false;
+          this.router.navigate(['clientelogado']);
 
-
-
+        },
+        (error) => {
+          alert('Usuário ou senha inválida!');
+        }
+      );
   }
 
   ngOnInit(): void {}
