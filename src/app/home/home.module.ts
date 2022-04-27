@@ -4,22 +4,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CadastroNovoClienteComponent } from './cadastro-novo-cliente/cadastro-novo-cliente.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    CadastroNovoClienteComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     FormsModule,
     HttpClientModule,
-    UteisModule
+    UteisModule,
+    ReactiveFormsModule
   ],
   exports:[
-    HomeComponent
+    HomeComponent,
+    CadastroNovoClienteComponent
   ]
 })
 export class HomeModule { }

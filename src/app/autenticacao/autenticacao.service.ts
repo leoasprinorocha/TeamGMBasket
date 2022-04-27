@@ -14,7 +14,7 @@ export class AutenticacaoService {
       'Email': email,
       'Password': password
     }
-    return this.httpClient.post("http://192.168.100.19:46000/authentication/login",credentials);
+    return this.httpClient.post("http://192.168.0.2:46000/authentication/login",credentials);
 
   }
 }

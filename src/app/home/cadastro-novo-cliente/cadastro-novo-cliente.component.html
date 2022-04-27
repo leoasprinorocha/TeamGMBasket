@@ -1,0 +1,77 @@
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Cadastre-se</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
+          <div class="input_field">
+            <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              formControlName="email"
+            />
+          </div>
+          <div class="input_field">
+            <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input
+              type="password"
+              name="password"
+              placeholder="Senha"
+              required
+              formControlName="password"
+            />
+          </div>
+          <div class="input_field">
+            <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input
+              type="password"
+              name="password"
+              placeholder="Repita a senha"
+              required
+              formControlName="confirmPassword"
+            />
+          </div>
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" placeholder="Nome completo" formControlName="nome"/>
+              </div>
+            </div>
+
+            <div class="col_half">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                <input type="text" name="name" placeholder="Telefone" formControlName="telefone"/>
+              </div>
+            </div>
+
+            <div class="col_half">
+              <div class="input_field">
+                <span
+                  ><i aria-hidden="true" class="fa fa-address-book"></i
+                ></span>
+                <input type="text" name="name" placeholder="Endereço" formControlName="endereco"/>
+              </div>
+            </div>
+          </div>
+
+          <input class="button" type="submit" value="Registrar" />
+        </form>
+
+        <div class="row">
+          <a [routerLink]="['']">
+            <button type="button" class="btn btn-primary mt-5 col-12">
+              Voltar página inicial
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

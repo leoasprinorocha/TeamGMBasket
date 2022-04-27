@@ -4,14 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: TelaPrincipalClienteComponent,
-
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ClienteRoutingModule { }
+export class ClienteRoutingModule {}

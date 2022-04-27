@@ -4,9 +4,11 @@ import { ClienteRoutingModule } from './cliente-routing.module';
 import { TelaPrincipalClienteComponent } from './tela-principal-cliente/tela-principal-cliente.component';
 
 
+
 @NgModule({
   declarations: [
-    TelaPrincipalClienteComponent
+    TelaPrincipalClienteComponent,
+
   ],
   imports: [
     CommonModule,
