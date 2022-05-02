@@ -9,6 +9,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Proxy config
 // "start": "ng serve --proxy-config proxy.config.js"
 
+## Link publish Docket Heroku API:
+https://medium.com/@lorranpalmeira/deploy-de-uma-aplica%C3%A7%C3%A3o-net-core-3-0-docker-no-heroku-481c21f8d3c5
+
 ## Heroku GIT
 https://git.heroku.com/secure-taiga-59453.git
 

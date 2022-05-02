@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiURL: 'http://gerenciaapi-001-site1.itempurl.com/',
+  apiURL: 'https://invest-easy-api.herokuapp.com',
   title: 'InvestEasy PROD'
 };
