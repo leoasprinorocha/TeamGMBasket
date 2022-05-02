@@ -1,46 +1,50 @@
-<div class="retangulo_superior">
-  <p class="retangulo_superior-saudacao_inicial">Olá, Leonardo</p>
-  <img
-    class="retangulo_superior-btn_ajuda"
-    src="assets/images/botaoAjudaRetanguloSuperior.png"
-  />
-  <img
-    class="retangulo_superior-btn_logout"
-    src="assets/images/botaoLogoutRetanguloSuperior.png"
-  />
-  <img
-    class="retangulo_superior-btn_menu"
-    src="assets/images/botaoMenuRetanguloSuperior.png"
-  />
+<div class="retangulo_superior text-center">
+  <p class="retangulo_superior-saudacao_inicial"><b>Olá, Leonardo</b></p>
 </div>
 
-<div class="retangulo_saldo">
-  <p class="retangulo_saldo_disponivel">Disponível</p>
-  <p class="retangulo_saldo_cifrao">R$</p>
-  <p class="retangulo_saldo-saldo_carteira">5000,00</p>
+<div class="retangulo_menu d-flex justify-content-center">
+
+
 </div>
 
-<div class="retangulo_graficos_ganhos">
-  <p class="retangulo_graficos_ganhos-ganho">Ganhos</p>
-  <img class="retangulo_graficos-grafico" src="assets/images/Chart.png" />
+<div class="row d-flex justify-content-center">
+  <button class="btn bg-info col-10" type="button" (click)="abreMenu()">
+    <b>MENU PRINCIPAL</b>
+  </button>
+</div>
+<br>
+<div class="row d-flex justify-content-center">
+  <button class="btn bg-info col-10" type="button" (click)="abreMenu()">
+    <b>MEUS INVESTIMENTOS</b>
+  </button>
 </div>
 
-<button class="retangulo_graficos-botoes_acoes">
-  <p class="retangulo_graficos-texto_botoes_acoes">Novo aporte</p>
-</button>
+<div class="row mt-5">
+  <div class="retangulo_saldo">
+    <p class="retangulo_saldo_disponivel">Disponível</p>
+    <p class="retangulo_saldo_cifrao">R$</p>
+    <p class="retangulo_saldo-saldo_carteira">5000,00</p>
+  </div>
 
-<button class="retangulo_graficos-botoes_acoes" style="margin-left: 50%">
-  <p class="retangulo_graficos-texto_botoes_acoes">Sacar</p>
-</button>
+  <div class="retangulo_graficos_ganhos">
+    <p class="retangulo_graficos_ganhos-ganho">Ganhos</p>
+    <img class="retangulo_graficos-grafico" src="assets/images/Chart.png" />
+  </div>
 
-<button
-  class="retangulo_graficos-botoes_acoes"
-  style="
-    margin-top: 13%;
-    position: absolute;
-    text-align: center;
-    left: 34%;
-  "
->
-  <p class="retangulo_graficos-texto_botoes_acoes">Reinvestir</p>
-</button>
+  <div class="linhabotoes" hidden>
+    <button class="retangulo_graficos-botoes_acoes">
+      <p class="retangulo_graficos-texto_botoes_acoes">Novo aporte</p>
+    </button>
+
+    <button class="retangulo_graficos-botoes_acoes" style="margin-left: 50%">
+      <p class="retangulo_graficos-texto_botoes_acoes">Sacar</p>
+    </button>
+
+    <button
+      class="retangulo_graficos-botoes_acoes"
+      style="margin-top: 13%; position: absolute; text-align: center; left: 34%"
+    >
+      <p class="retangulo_graficos-texto_botoes_acoes">Reinvestir</p>
+    </button>
+  </div>
+</div>

@@ -1,10 +1,9 @@
 .retangulo_superior {
   position: absolute;
   width: 100%;
-  height: 105px;
+  height: 10%;
   left: 0px;
   top: 0px;
-
   background: #2337ea;
 }
 
@@ -50,7 +49,7 @@
   width: 90%;
   align-self: center;
   height: 159px;
-  top: 141px;
+  top: 240px;
   left: 20px;
 
   background: rgba(196, 196, 196, 0.25);
@@ -111,7 +110,7 @@
   width: 90%;
   height: 350px;
   left: 23px;
-  top: 327px;
+  top: 420px;
 
   background: rgba(196, 196, 196, 0.25);
   border-radius: 10px;
@@ -146,11 +145,17 @@
 position: absolute;
 width: 140px;
 height: 44px;
-left: 41px;
-top: 87%;
+
 
 background: #2337EA;
 border-radius: 50px;
+}
+
+.btnmenu{
+  font-size: 35px;
+  color: #000000;
+  margin-top: -50px;
+  margin-right: 10px;
 }
 
 .retangulo_graficos-texto_botoes_acoes{
@@ -166,3 +171,11 @@ border-radius: 50px;
 
   color: #FFFFFF;
 }
+
+.retangulo_menu{
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+
+

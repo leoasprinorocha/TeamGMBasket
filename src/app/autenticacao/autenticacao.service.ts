@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { AppComponent } from '../app.component';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AutenticacaoService {
       'Email': email,
       'Password': password
     }
-    return this.httpClient.post("http://192.168.0.2:46000/authentication/login",credentials);
+    return this.httpClient.post(`${AppComponent.apiUrl}authentication/login`,credentials);
 
   }
 }

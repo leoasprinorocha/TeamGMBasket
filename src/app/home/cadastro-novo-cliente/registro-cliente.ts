@@ -10,6 +10,6 @@ export interface RegistroCliente {
   cpf:string,
   endereco:string,
   byteArrayFoto:string,
-  Cliente: CadastroNovoUsuario
+  cliente: CadastroNovoUsuario
 
 }

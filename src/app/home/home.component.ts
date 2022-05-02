@@ -1,3 +1,6 @@
+import { TelaPrincipalClienteComponent } from './../cliente/tela-principal-cliente/tela-principal-cliente.component';
+import { MenuComponent } from './menu/menu.component';
+import { MatDialog } from '@angular/material/dialog';
 import { AutenticacaoService } from './../autenticacao/autenticacao.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -16,7 +19,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authService: AutenticacaoService,
-    private router: Router
+    private router: Router,
+    private dialogRef: MatDialog
   ) {
     this.invalidLogin = true;
   }
@@ -41,4 +45,5 @@ export class HomeComponent implements OnInit {
   logOut() {
     localStorage.removeItem('jwt');
   }
+
 }

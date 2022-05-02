@@ -1,7 +1,8 @@
+import { CadastroNovoUsuario } from './cadastro-novo-usuario';
 import { RegistroCliente } from './registro-cliente';
 import { CadastroNovoClienteService } from './cadastro-novo-cliente.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-novo-cliente',
@@ -15,38 +16,47 @@ export class CadastroNovoClienteComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private novoUsuarioService: CadastroNovoClienteService
-  ) {
-
-  }
+  ) {}
 
   ngOnInit(): void {
     this.novoUsuarioForm = this.formBuilder.group({
-      email:[''],
-      password:[''],
-      confirmPassword:[''],
-      nome:[''],
-      telefone:[''],
-      endereco:['']
+      email: ['',[
+        Validators.required,
+        Validators.email
+      ]],
+      password: [''],
+      confirmPassword: [''],
+      nome: ['', [Validators.required, Validators.minLength(5)]],
+      telefone: [''],
+      endereco: [''],
     });
-
   }
 
-  cadastrar(){
+  cadastrar() {
     this.novoUsuario = this.novoUsuarioForm.getRawValue() as RegistroCliente;
+
+    let cadastroNovoUsuario: CadastroNovoUsuario = {
+      nome: this.novoUsuario.nome,
+      telefone: this.novoUsuario.telefone,
+      endereco: this.novoUsuario.endereco,
+    };
+
+    this.novoUsuario.cliente = cadastroNovoUsuario;
     console.log(this.novoUsuario);
-    this.novoUsuario.Cliente.nome = this.novoUsuario.nome;
-    this.novoUsuario.Cliente.telefone = this.novoUsuario.telefone;
-    this.novoUsuario.Cliente.endereco = this.novoUsuario.endereco;
+    this.novoUsuario.cliente.nome = this.novoUsuario.nome;
+    this.novoUsuario.cliente.telefone = this.novoUsuario.telefone;
+    this.novoUsuario.cliente.endereco = this.novoUsuario.endereco;
 
     var jsonCode = JSON.stringify(this.novoUsuario);
     console.log(jsonCode);
-    this.novoUsuarioService.cadastraNovoUsuario(this.novoUsuario).subscribe(() =>{
-      alert('Usuário cadastrado com sucesso!');
-    },
-    (error) =>{
-      console.log(error);
-      alert('Houve um erro ao cadastrar');
-    }
+    this.novoUsuarioService.cadastraNovoUsuario(this.novoUsuario).subscribe(
+      () => {
+        alert('Usuário cadastrado com sucesso!');
+      },
+      (error) => {
+        console.log(error);
+        alert('Houve um erro ao cadastrar');
+      }
     );
   }
 }
