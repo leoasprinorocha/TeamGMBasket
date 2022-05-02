@@ -6,8 +6,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Proxy config:
+## Proxy config
 // "start": "ng serve --proxy-config proxy.config.js"
+
+## Heroku GIT
+https://git.heroku.com/secure-taiga-59453.git
 
 ## Code scaffolding
 
