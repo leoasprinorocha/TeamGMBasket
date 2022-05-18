@@ -11,7 +11,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './uteis/loading.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +24,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     ClienteRoutingModule,
     UteisModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    })
   ],
   providers: [
     {

@@ -1,5 +1,3 @@
-import { TelaPrincipalClienteComponent } from './../cliente/tela-principal-cliente/tela-principal-cliente.component';
-import { MenuComponent } from './menu/menu.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AutenticacaoService } from './../autenticacao/autenticacao.service';
 import { Component, OnInit } from '@angular/core';
@@ -30,9 +28,7 @@ export class HomeComponent implements OnInit {
       .autenticar(this.email, this.password)
       .subscribe(
         () => {
-
           this.router.navigate(['clientelogado']);
-
         },
         (error) => {
           alert('Usuário ou senha inválida!');
@@ -45,5 +41,4 @@ export class HomeComponent implements OnInit {
   logOut() {
     localStorage.removeItem('jwt');
   }
-
 }
