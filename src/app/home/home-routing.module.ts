@@ -1,4 +1,4 @@
-import { HomeComponent } from './home.component';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroNovoClienteComponent } from './cadastro-novo-cliente/cadastro-novo-cliente.component';
@@ -6,7 +6,7 @@ import { CadastroNovoClienteComponent } from './cadastro-novo-cliente/cadastro-n
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LandingpageComponent,
   },
   {
     path: 'cadastronovousuario',

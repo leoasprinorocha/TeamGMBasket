@@ -16,14 +16,14 @@
       "type": "pwa-chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://192.168.137.1:45000/"
+      "url": "http://192.168.0.13:45000/"
     },
     {
       "name": "mobile",
       "type": "pwa-chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://192.168.0.2:45500/"
+      "url": "http://192.168.0.2:45000/"
     },
     {
       "name": "ng test",

@@ -47,16 +47,8 @@ export class CadastroNovoClienteComponent implements OnInit {
     this.novoUsuario.cliente.telefone = this.novoUsuario.telefone;
     this.novoUsuario.cliente.endereco = this.novoUsuario.endereco;
 
-    var jsonCode = JSON.stringify(this.novoUsuario);
-    console.log(jsonCode);
-    this.novoUsuarioService.cadastraNovoUsuario(this.novoUsuario).subscribe(
-      () => {
-        alert('Usuário cadastrado com sucesso!');
-      },
-      (error) => {
-        console.log(error);
-        alert('Houve um erro ao cadastrar');
-      }
-    );
+    var response = this.novoUsuarioService.cadastraNovoUsuario(this.novoUsuario);
+    console.log(response);
+    alert(response.message);
   }
 }

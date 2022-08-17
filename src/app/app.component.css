@@ -1,0 +1,11 @@
+body{
+  background-image: url(/assets/images/smallerhomebackground.png);
+}
+
+@media only screen and (min-device-width: 400px) {
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(/assets/images/homebackground.png);
+  }
+}

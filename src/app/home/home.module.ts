@@ -1,3 +1,6 @@
+import { AutenticacaoModule } from './../autenticacao/autenticacao.module';
+import { CabecalhoModule } from './../componentes/cabecalho/cabecalho.module';
+import { MensagemComponent } from './../uteis/mensagem/mensagem.component';
 import { UteisModule } from './../uteis/uteis.module';
 import { HomeComponent } from './home.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -7,6 +10,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastroNovoClienteComponent } from './cadastro-novo-cliente/cadastro-novo-cliente.component';
 import { MenuComponent } from './menu/menu.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -14,6 +21,8 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     CadastroNovoClienteComponent,
     MenuComponent,
+    LandingpageComponent,
+
 
   ],
   imports: [
@@ -22,12 +31,19 @@ import { MenuComponent } from './menu/menu.component';
     FormsModule,
     HttpClientModule,
     UteisModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CabecalhoModule,
+    NgxMaskModule.forChild(),
+    MatIconModule,
+    MatMenuModule
+
   ],
   exports:[
     HomeComponent,
     CadastroNovoClienteComponent,
-    MenuComponent
+    MenuComponent,
+    MensagemComponent
+
   ]
 })
 export class HomeModule { }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://192.168.0.2:46000/',
+  apiURL: 'http://192.168.1.4:46000/',
   title: 'InvestEasy DEV'
 };
 

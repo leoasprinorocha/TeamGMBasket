@@ -1,3 +1,4 @@
+import { CabecalhoModule } from './../componentes/cabecalho/cabecalho.module';
 import { HomeModule } from './../home/home.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [TelaPrincipalClienteComponent],
-  imports: [CommonModule, ClienteRoutingModule, HomeModule, MatDialogModule],
+  imports: [CommonModule, ClienteRoutingModule, HomeModule, MatDialogModule, CabecalhoModule],
   exports: [TelaPrincipalClienteComponent],
 })
 export class ClienteModule {}

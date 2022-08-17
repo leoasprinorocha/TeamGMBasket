@@ -1,0 +1,19 @@
+
+  <nav class="navbar navbar-light bg-info">
+    <a class="navbar-brand ml-2">Invest Easy</a>
+    <div *ngIf="user$ | async as user">
+      <div *ngIf="user.name; else login">
+        <i class="fa fa-user-circle">
+          <a class="">{{ user.name }}</a>
+          <a (click)="logout()">Logout</a>
+        </i>
+      </div>
+    </div>
+  </nav>
+
+  <ng-template #login>
+    <span class="navbar-text">
+      <a [routerLink]="['']">Login</a>
+    </span>
+  </ng-template>
+

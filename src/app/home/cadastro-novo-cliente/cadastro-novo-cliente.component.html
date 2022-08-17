@@ -32,6 +32,14 @@
               required
               formControlName="password"
             />
+            <app-mensagem
+              *ngIf="
+                novoUsuarioForm.get('password')?.errors?.['required'] &&
+                novoUsuarioForm.get('password')?.touched
+              "
+              mensagem="Senha obrigatória;
+                        A senha necessita ter no mínimo 8 caracteres, 1 letra maiúscula, 1 letra minúscula, 1 caracter especial e 1 número ao menos"
+            ></app-mensagem>
           </div>
           <div class="input_field">
             <span><i aria-hidden="true" class="fa fa-lock"></i></span>
@@ -42,6 +50,13 @@
               required
               formControlName="confirmPassword"
             />
+            <app-mensagem
+              *ngIf="
+                novoUsuarioForm.get('confirmPassword')?.errors?.['required'] &&
+                novoUsuarioForm.get('confirmPassword')?.touched
+              "
+              mensagem="Confirmar a senha!"
+            ></app-mensagem>
           </div>
           <div class="row clearfix">
             <div class="col_half">
@@ -52,7 +67,16 @@
                   name="name"
                   placeholder="Nome completo"
                   formControlName="nome"
+                  required
+                  autofocus
                 />
+                <app-mensagem
+                  *ngIf="
+                novoUsuarioForm.get('nome')?.errors?.['required'] &&
+                novoUsuarioForm.get('nome')?.touched
+              "
+                  mensagem="Nome obrigatório!"
+                ></app-mensagem>
               </div>
             </div>
 
@@ -64,7 +88,15 @@
                   name="name"
                   placeholder="Telefone"
                   formControlName="telefone"
+                  mask="(00) 00000-0000"
                 />
+                <app-mensagem
+                *ngIf="
+              novoUsuarioForm.get('telefone')?.errors?.['required'] &&
+              novoUsuarioForm.get('telefone')?.touched
+            "
+                mensagem="Telefone obrigatório!"
+              ></app-mensagem>
               </div>
             </div>
 
@@ -79,11 +111,23 @@
                   placeholder="Endereço"
                   formControlName="endereco"
                 />
+                <app-mensagem
+                *ngIf="
+              novoUsuarioForm.get('endereco')?.errors?.['required'] &&
+              novoUsuarioForm.get('endereco')?.touched
+            "
+                mensagem="Endereço obrigatório!"
+              ></app-mensagem>
               </div>
             </div>
           </div>
 
-          <input class="button" type="submit" value="Registrar" />
+          <input
+            class="button"
+            type="submit"
+            value="Registrar"
+            [disabled]="novoUsuarioForm.invalid"
+          />
         </form>
 
         <div class="row">

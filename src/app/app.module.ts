@@ -1,3 +1,4 @@
+import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
 
 import { UteisModule } from './uteis/uteis.module';
 import { ClienteRoutingModule } from './cliente/cliente-routing.module';
@@ -13,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaskModule } from 'ngx-mask';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -25,6 +27,7 @@ import { NgxMaskModule } from 'ngx-mask';
     UteisModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    CabecalhoModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     })
