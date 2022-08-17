@@ -298,6 +298,7 @@ h1 {
   }
   h1 {
     font-size: 8px;
+
     -webkit-text-stroke: 2px transparent;
     -webkit-text-fill-color: #ffeba7;
     color: #ffeba7;
