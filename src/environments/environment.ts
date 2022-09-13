@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://192.168.1.4:46000/',
-  title: 'InvestEasy DEV'
+  apiURL: 'http://192.168.1.4:42000/',
+  title: 'TeamGm WEB DEV'
 };
 
 /*

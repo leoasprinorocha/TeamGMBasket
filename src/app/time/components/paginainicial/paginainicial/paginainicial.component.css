@@ -1,0 +1,51 @@
+table {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.iconeDetalhe{
+  font-size: 30px;
+  color: blue;
+}
+
+#colunaDetalhes{
+  margin-left: 50px;
+}
+
+
+#linkseditar{
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 9px;
+}
+
+#linksexcluir{
+  color:tomato;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 9px;
+}
+
+.btn{
+  margin-left: 8px;
+}
+
+.menuModal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.menuModal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.menuModal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

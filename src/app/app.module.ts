@@ -1,3 +1,4 @@
+import { TimeModule } from './time/time.module';
 import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
 
 import { UteisModule } from './uteis/uteis.module';
@@ -20,6 +21,7 @@ import { NgxMaskModule } from 'ngx-mask';
   imports: [
     BrowserModule,
     HomeModule,
+    TimeModule,
     HttpClientModule,
     RouterModule,
     AppRoutingModule,

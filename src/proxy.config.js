@@ -2,8 +2,9 @@ const proxy = [
   {
     context: "/api",
     target: [
-      "http://192.168.0.13:46000",
+      "https://localhost:44358/",
       "https://invest-easy-api.herokuapp.com/",
+      "http://192.168.1.4:42000/"
     ],
     pathRewrite: { "^/api": "" },
   },
