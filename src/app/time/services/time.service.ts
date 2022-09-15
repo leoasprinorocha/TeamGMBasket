@@ -12,6 +12,7 @@ export class TimeService {
 
   constructor(private httpClient: HttpClient) { }
 
+  public idTime!: number;
 
   recuperaTodosTimes(): Observable<Time[]> {
     var urlQuery = `${AppComponent.apiUrl}Times/RecuperaTodosTimes`;
@@ -20,11 +21,13 @@ export class TimeService {
     );
   }
 
-  adicionaTime(novoTime: Time): Observable<CustomHttpResponse> {
-    return this.httpClient.post<CustomHttpResponse>(
-      `${AppComponent.apiUrl}Usuarios/AdicionaUsuario`,
-      novoTime
+  recuperaDetalhesTime(idTime: number): Observable<Time> {
+    var urlQuery = `${AppComponent.apiUrl}Times/RecuperaDetalhesTime/${idTime}`;
+    return this.httpClient.get<Time>(
+      urlQuery
     );
   }
+
+
 
 }

@@ -1,3 +1,4 @@
+import { TecnicoModule } from './tecnico/tecnico.module';
 import { TimeModule } from './time/time.module';
 import { CabecalhoModule } from './componentes/cabecalho/cabecalho.module';
 
@@ -16,12 +17,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaskModule } from 'ngx-mask';
 
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     HomeModule,
     TimeModule,
+    TecnicoModule,
     HttpClientModule,
     RouterModule,
     AppRoutingModule,

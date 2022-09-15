@@ -20,6 +20,10 @@ table {
   margin-top: 9px;
 }
 
+#linkseditar:hover{
+  cursor: pointer;
+}
+
 #linksexcluir{
   color:tomato;
   font-weight: bold;

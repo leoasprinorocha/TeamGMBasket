@@ -1,3 +1,4 @@
+import { DetalhesComponent } from './../../detalhes/detalhes/detalhes.component';
 import { TimeService } from './../../../services/time.service';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
@@ -16,7 +17,7 @@ export class PaginainicialComponent implements OnInit {
 
   dataSource!: MatTableDataSource<any>;
 
-  constructor(private timeService: TimeService) { }
+  constructor(private timeService: TimeService, private detalhesComponent: DetalhesComponent) { }
 
   ngOnInit(): void {
     debugger
@@ -26,6 +27,11 @@ export class PaginainicialComponent implements OnInit {
       },
       (error) => console.log('Error : ', error)
     );
+  }
+
+  carregarDetalhesTime(event: any){
+    this.timeService.idTime = Number(event.target.dataset.idtime);
+    this.detalhesComponent.abreModalDetalhesTime();
   }
 
   applyFilter(event: Event) {
